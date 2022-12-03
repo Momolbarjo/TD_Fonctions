@@ -4,7 +4,8 @@
 #include <unistd.h>
 
 
-void CompareNumber (int a,int b) {
+void CompareNumber (int a,int b) 
+{
 
 
 
@@ -12,26 +13,30 @@ b=rand()%101;
 srand(time(NULL));
 
 
-for (int i=1;i<=11;i++) {
+for (int i=1;i<=11;i++) 
+ {
     scanf("%d",&a);
    if(a<b) {
 
         printf("Plus grand \n");
 
-        if (i==11){
+        if (i==11)
+        {
 
             printf("sale merde ta perdu");
         }
 
 
-   }
+ }
 
-    else if(a>b) {
+    else if(a>b) 
+    {
 
         printf("Plus petit\n");
 
 
-        if (i==11){
+        if (i==11)
+        {
 
             printf("sale merde ta perdu");
         }
@@ -40,19 +45,20 @@ for (int i=1;i<=11;i++) {
 
    }
 
-    else if (a==b) {
+    else if (a==b) 
+    {
 
         printf("Trouve !");
 
         break;
 
-   }
+    }
 
 printf("\n");
 
 
 
-}
+ }
 
 }
 
@@ -67,7 +73,8 @@ printf("\n");
 
 
 
-void main () {
+void main () 
+{
 
 
 srand(time(NULL));
