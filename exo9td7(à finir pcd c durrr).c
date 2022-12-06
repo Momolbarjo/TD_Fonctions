@@ -27,7 +27,7 @@ int playerTurn(nbdes)
 
    int  score=0;
 
-    printf("\nVoulez vous lancer 1 ou 2 dés: " );
+    printf("\nVoulez vous lancer 1 ou 2 dÃ©s: " );
     scanf("%d",&nbdes);
 
 
@@ -35,7 +35,7 @@ int playerTurn(nbdes)
     if (nbdes<1 ||nbdes>2) {
 
 
-     printf("Erreur,Voulez vous lancer 1 ou 2 dés: " );
+     printf("Erreur,Voulez vous lancer 1 ou 2 dÃ©s: " );
     scanf("%d",&nbdes);
 
 
@@ -86,7 +86,7 @@ int playerTurn2(nbdes)
 
    int  score=0;
 
-    printf("\nVoulez vous lancer 1 ou 2 dés: " );
+    printf("\nVoulez vous lancer 1 ou 2 dÃ©s: " );
     scanf("%d",&nbdes);
 
 
@@ -94,7 +94,7 @@ int playerTurn2(nbdes)
     if (nbdes<1 ||nbdes>2) {
 
 
-     printf("Erreur,Voulez vous lancer 1 ou 2 dés: " );
+     printf("Erreur,Voulez vous lancer 1 ou 2 dÃ©s: " );
     scanf("%d",&nbdes);
 
 
