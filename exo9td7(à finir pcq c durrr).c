@@ -52,7 +52,7 @@ int playerTurn(int nbdes)
     
 
 
-    else if (nbdes==1)
+     if (nbdes==1)
     {
 
 
@@ -95,6 +95,18 @@ void main (){
 	printf("\nVoulez vous lancer 1 ou 2 dés: " );
     	scanf("%d",&nbdes);
 
+	 if (nbdes<1 ||nbdes>2) {
+
+
+     printf("Erreur,Voulez vous lancer 1 ou 2 dés: " );
+    scanf("%d",&nbdes);
+
+
+    }
+	else 
+	{
+
+
         score1=playerTurn(nbdes);
         printf("\n Joueur 1,Votre score est de %d\n",score1);
 	
@@ -104,7 +116,7 @@ void main (){
         printf(" Joueur 2,Votre score est de %d\n",score2);
 
 
-
+	}
     }
 
     if (score1 >=30) {
