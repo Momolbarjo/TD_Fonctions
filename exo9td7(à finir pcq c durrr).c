@@ -2,24 +2,32 @@
 #include <time.h>
 #include <stdlib.h>
 
-// Il faut utiliser la foncrtion (rand()%6)+1
+// Il faut utiliser la fonction (rand()%6)+1
 
 
 
 int throwDice(int res)
 {
 
-    srand(time(NULL));
-    int res2;
+    
+ 
     res=(rand()%6)+1;
     return(res);
+    
+
+}
+
+int throwDice2(int res2)
+{
+
+    
     res2=(rand()%6)+1;
     return(res2);
 
 }
 
 
-int playerTurn(nbdes)
+int playerTurn(int nbdes)
 {
 
     int res=(rand()%6)+1;
@@ -53,7 +61,7 @@ int playerTurn(nbdes)
     {
 
 
-        throwDice ( res);
+        throwDice( res);
         score = score + throwDice(res);
         return (score);
 
@@ -64,22 +72,21 @@ int playerTurn(nbdes)
     {
 
         throwDice( res);
-        throwDice( res2);
+        throwDice2( res2);
 
-        if (throwDice (res)==throwDice ( res2))
+        if (throwDice (res)==throwDice(res2))
             {
-                score= score - (throwDice(res) + throwDice ( res2));
+                score= score - (throwDice(res) + throwDice2(res2));
                 return (score);
             }
         else {
 
-               score= score + (throwDice(res) + throwDice ( res2));
+               score= score + (throwDice(res) + throwDice2( res2));
                 return (score);
     }
 }
 
-int playerTurn2(nbdes)
-{
+int playerTurn2( nbdes){
 
     int res=(rand()%6)+1;
     int res2=(rand()%6)+1;
@@ -112,7 +119,7 @@ int playerTurn2(nbdes)
     {
 
 
-        throwDice ( res);
+        throwDice(res);
         score = score + throwDice(res);
         return (score);
     }
@@ -121,29 +128,30 @@ int playerTurn2(nbdes)
     if (nbdes==2)
     {
 
-        throwDice( res);
-        throwDice( res2);
-
-        if (throwDice (res)==throwDice ( res2))
+        throwDice(res);
+        throwDice2(res2);
+}
+        if (throwDice (res)==throwDice2( res2))
             {
-                score= score - (throwDice(res) + throwDice ( res2));
+                score= score - (throwDice(res) + throwDice2(res2));
                 return (score);
 
             }
         else {
 
-               score= score + (throwDice(res) + throwDice ( res2));
+               score= score + (throwDice(res) + throwDice2(res2));
                 return (score);
         }
-    }
+    return (score);
 }
 
 
-void main ()
-{
+void main (){
     int score1 =0;
     int score2 =0;
     int nbdes;
+
+    srand(time(NULL));
 
     while (score1 <30 ||score2 <30) {
 
@@ -175,6 +183,5 @@ void main ()
 
     }
 
-}
-}
-
+  }
+      }
