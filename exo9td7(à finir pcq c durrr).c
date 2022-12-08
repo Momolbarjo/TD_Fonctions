@@ -5,13 +5,16 @@
 // Il faut utiliser la fonction (rand()%6)+1
 
 
+void srand(unsigned int seed);
 
 int throwDice()
 {
 int res;
-
+time_t t,t1;
 
     res=(rand()%6)+1;
+    srand((unsigned) time(&t)) ;
+    printf(" \n resultat du tour : %d \n ", res);
     return(res);
 
 
@@ -22,8 +25,8 @@ int res;
 int playerTurn(int nbdes)
 {
 
-
-   int  score=0;
+int  score=0;
+int resultat1,resultat2;
 
 
      if (nbdes==1)
@@ -38,11 +41,11 @@ int playerTurn(int nbdes)
 
     else if (nbdes==2)
     {
-	int resultat1,resultat2;
 
-        resultat1=throwDice();
-        resultat2=throwDice();
 
+        resultat1= throwDice();
+        resultat2= throwDice();
+    }
         if (resultat1==resultat2)
             {
                 score= score - (resultat1 + resultat2);
@@ -54,18 +57,21 @@ int playerTurn(int nbdes)
                 return (score);
     }
 }
-}
+
 
 void main (){
-    int score1 =0;
-    int score2 =0;
+    int Score1 =0;
+    int Score2 =0;
+    int scoreTmp1 = 0;
+    int scoreTmp2 = 0;
     int nbdes;
 
 
 
-    while (score1 <30 ||score2 <30) {
 
-	printf("\nVoulez vous lancer 1 ou 2 des: " );
+    while ((Score1 <30) && (Score2 <30)) {
+
+	printf("\n Voulez vous lancer 1 ou 2 des: " );
     	scanf("%d",&nbdes);
 
 	 if (nbdes<1 ||nbdes>2) {
@@ -78,38 +84,38 @@ void main (){
     }
 	else
 	{
+        printf(" \n Joueur 1 \n");
+        scoreTmp1= playerTurn(nbdes);
+        Score1= Score1 + scoreTmp1;
+        printf("\n Joueur 1,Votre Score est de %d\n",Score1);
 
 
-        score1=playerTurn(nbdes);
-        printf("\n Joueur 1,Votre score est de %d\n",score1);
-
-
-
-        score2=playerTurn(nbdes);
-        printf(" Joueur 2,Votre score est de %d\n",score2);
+        printf(" \n Joueur 2 \n");
+;
+        scoreTmp2= playerTurn(nbdes);
+        Score2=Score2+scoreTmp2;
+        printf(" Joueur 2,Votre Score est de %d\n",Score2);
 
 
 	}
     }
 
-    if (score1 >=30) {
-
-        printf("Le joueur 1 a gagner !");
-
-    }
-
-    else if (score2 >=30) {
-
-        printf("Le joueur 2 a gagner !");
-
-    }
-
-    else if (score1 >=30 && score2 >= 30) {
+    if ((Score1 >=30) && (Score2 >= 30)) {
 
         printf("Egalite !");
 
     }
 
+    else if (Score2 >=30) {
+
+        printf("Le joueur 2 a gagner !");
+
+    }
+
+    else if (Score1 >=30) {
+
+        printf("Le joueur 1 a gagner !");
+
+    }
+
   }
-
-
