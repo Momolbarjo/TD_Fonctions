@@ -57,16 +57,16 @@ void main()
     askUserInt( min,  max);
 
     printf("Bravo !");
-	 /*2)int a;
-	int b;
-	int c;
-	printf("Entrez un caractere :");
-	a=scanf("%d",&b);
-	a=0;
-	 printf("\na=%d\n",a);
-	printf("Entrez un entier :");
-	a=scanf("%d",&c);
-	a=1;
-	 printf("\na=%d\n",a);*/
+     /*2)int a;
+    int b;
+    int c;
+    printf("Entrez un caractere :");
+    a=scanf("%d",&b);
+    a=0;
+    printf("\na=%d\n",a);
+    printf("Entrez un entier :");
+    a=scanf("%d",&c);
+    a=1;
+    printf("\na=%d\n",a);*/
 
 }
