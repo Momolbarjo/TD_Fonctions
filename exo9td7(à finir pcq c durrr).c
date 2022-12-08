@@ -9,54 +9,27 @@
 int throwDice()
 {
 int res;
-     //srand(time(NULL));
- 
+
+
     res=(rand()%6)+1;
     return(res);
-    
+
 
 }
-
-/*int throwDice2(int res2)
-{
-
-    
-    res2=(rand()%6)+1;
-    return(res2);
-
-}*/
 
 
 
 int playerTurn(int nbdes)
 {
 
-    /*int res=(rand()%6)+1;
-    int res2=(rand()%6)+1;*/
 
    int  score=0;
-
-    
-
-
-
-    if (nbdes<1 ||nbdes>2) {
-
-
-     printf("Erreur,Voulez vous lancer 1 ou 2 dés: " );
-    scanf("%d",&nbdes);
-
-
-    }
-
-    
 
 
      if (nbdes==1)
     {
 
 
-        //throwDice( res);
         score = score + throwDice();
         return (score);
 
@@ -66,7 +39,7 @@ int playerTurn(int nbdes)
     else if (nbdes==2)
     {
 	int resultat1,resultat2;
-	
+
         resultat1=throwDice();
         resultat2=throwDice();
 
@@ -88,28 +61,28 @@ void main (){
     int score2 =0;
     int nbdes;
 
-   
+
 
     while (score1 <30 ||score2 <30) {
-	
-	printf("\nVoulez vous lancer 1 ou 2 dés: " );
+
+	printf("\nVoulez vous lancer 1 ou 2 des: " );
     	scanf("%d",&nbdes);
 
 	 if (nbdes<1 ||nbdes>2) {
 
 
-     printf("Erreur,Voulez vous lancer 1 ou 2 dés: " );
-    scanf("%d",&nbdes);
+     printf("Erreur! " );
+
 
 
     }
-	else 
+	else
 	{
 
 
         score1=playerTurn(nbdes);
         printf("\n Joueur 1,Votre score est de %d\n",score1);
-	
+
 
 
         score2=playerTurn(nbdes);
@@ -138,4 +111,5 @@ void main (){
     }
 
   }
-      
+
+
