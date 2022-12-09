@@ -10,10 +10,8 @@ void srand(unsigned int seed);
 int throwDice()
 {
 int res;
-time_t t,t1;
 
     res=(rand()%6)+1;
-    srand((unsigned) time(&t)) ;
     printf(" \n resultat du tour : %d \n ", res);
     return(res);
 
@@ -26,7 +24,7 @@ int playerTurn(int nbdes)
 {
 
 int  score=0;
-int resultat1,resultat2;
+
 
 
      if (nbdes==1)
@@ -43,9 +41,9 @@ int resultat1,resultat2;
     {
 
 
-        resultat1= throwDice();
-        resultat2= throwDice();
-    }
+        int resultat1= throwDice();
+        int resultat2= throwDice();
+
         if (resultat1==resultat2)
             {
                 score= score - (resultat1 + resultat2);
@@ -57,9 +55,11 @@ int resultat1,resultat2;
                 return (score);
     }
 }
+}
 
 
 void main (){
+    srand((unsigned)time(NULL));
     int Score1 =0;
     int Score2 =0;
     int scoreTmp1 = 0;
@@ -119,3 +119,4 @@ void main (){
     }
 
   }
+
