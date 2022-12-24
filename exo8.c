@@ -8,8 +8,6 @@
 
 #define MAX 1000
 
-
-
 int askUserInt (int min, int max)
 {
   srand(time(NULL));
@@ -26,28 +24,14 @@ int askUserInt (int min, int max)
 
   if (ValeurUtilisateur <min || ValeurUtilisateur >max)
 
-
     {
       printf("\nErreur, la valeur n'est pas dans l'intervalle\n");
       printf("Entrez une valeur entre le minimum et le maximum:");
       scanf("%d",&ValeurUtilisateur);
-
-
-
     }
 
   return(ValeurUtilisateur);
-
-
-
-
-
-
-
-
-
 }
-
 
 void main()
 {
