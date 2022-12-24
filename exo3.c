@@ -18,7 +18,7 @@ for (int i=1;i<=11;i++)
 
         if (i==11)
         {
-            printf("sale merde tu as perdu");
+            printf("\nHA, sale merde tu as perdu");
         }
  }
     else if(a>b) 
@@ -27,7 +27,7 @@ for (int i=1;i<=11;i++)
 
         if (i==11)
         {
-            printf("sale merde tu as perdu");
+            printf("\nHA, sale merde tu as perdu");
         }
    }
 
