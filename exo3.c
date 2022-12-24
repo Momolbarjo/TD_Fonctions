@@ -48,7 +48,7 @@ void main ()
 srand(time(NULL));
 
 int a,b;
- printf("Quel est la valeur secrete :");
+ printf("Quel est la valeur secrete : \n");
 
     CompareNumber(a, b);
 
