@@ -12,13 +12,10 @@ int throwDice()
 int res;
 
     res=(rand()%6)+1;
-    printf(" \n resultat du tour : %d \n ", res);
+    printf("resultat du lancer : %d \n ", res);
     return(res);
 
-
 }
-
-
 
 int playerTurn(int nbdes)
 {
@@ -71,7 +68,7 @@ void main (){
 
     while ((Score1 <30) && (Score2 <30)) {
 
-	printf("\n Voulez vous lancer 1 ou 2 des: " );
+	printf("\nVoulez vous lancer 1 ou 2 des: " );
     	scanf("%d",&nbdes);
 
 	 if (nbdes<1 ||nbdes>2) {
@@ -84,13 +81,13 @@ void main (){
     }
 	else
 	{
-        printf(" \n Joueur 1 \n");
+        printf("\nJoueur 1 \n");
         scoreTmp1= playerTurn(nbdes);
         Score1= Score1 + scoreTmp1;
         printf("\n Joueur 1,Votre Score est de %d\n",Score1);
 
 
-        printf(" \n Joueur 2 \n");
+        printf("\nJoueur 2 \n");
 ;
         scoreTmp2= playerTurn(nbdes);
         Score2=Score2+scoreTmp2;
@@ -102,19 +99,19 @@ void main (){
 
     if ((Score1 >=30) && (Score2 >= 30)) {
 
-        printf("Egalite !");
+        printf("\nEgalite !");
 
     }
 
     else if (Score2 >=30) {
 
-        printf("Le joueur 2 a gagner !");
+        printf("\nLe joueur 2 a gagner !");
 
     }
 
     else if (Score1 >=30) {
 
-        printf("Le joueur 1 a gagner !");
+        printf("\nLe joueur 1 a gagner !");
 
     }
 
