@@ -27,13 +27,13 @@ if (a<b) {
     printf("La somme de tous les entiers entre vos 2 valeurs est %d",somme);
      return(somme);
 
+
 }
 
  else if (a=b) {
-
-
-    printf("La somme de tous les entiers entre vos 2 valeurs est %d",a);
-      return(a);
+somme=a+b;
+    printf("La somme de tous les entiers entre vos 2 valeurs est %d",somme);
+      return(somme);
 
     }
 
@@ -46,6 +46,5 @@ int a,b,somme;
 printf("Entrez 2 valeurs: ");
 
 Somme(a,b);
-
 
 }
