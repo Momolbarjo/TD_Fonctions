@@ -18,8 +18,6 @@ int max2 (int a, int b)
     else if  (b<a) {
 
 
-
-
         return(a);
     }
 
@@ -30,8 +28,6 @@ int max2 (int a, int b)
 int max4 (int a, int b,int c, int d)
 {
 
-
-    int max2(int,int);
     int max1,max3;
     max1=max2(a,b);
     max3=max2(c,d);
