@@ -54,8 +54,6 @@ void main ()
     int Maxab=max2(a,b);
     int MAX=max4(a,b,c,d);
 
-
-
     printf("a=%d ;b=%d;c=%d;d=%d\n",a,b,c,d);
 
     max2(a,b);
@@ -65,14 +63,6 @@ void main ()
     max4(a,b,c,d);
 
     printf("Le maximum entre a , b,c et d est %d",MAX);
-
-
-
-
-
-
-
-
 
 
 }
