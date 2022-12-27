@@ -42,7 +42,7 @@ void main()
 
     printf("Bravo !");
      /*2)Si caractere =>0
-         Si entier => 1 (cf 1))
+         Si entier => 1 (cf 1))*/
 
 
 }
